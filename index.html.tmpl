@@ -32,16 +32,13 @@
         });
       });//]]>
     </script>
-    #if $Extras.has_key('use_thunderstorms') and $Extras.use_thunderstorms == '1'
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/locale/en-au.js"></script> 
-    <script type="text/javascript" src="./trac.js"></script>
     <script type="text/javascript">
-    jQuery(window).load(function () {
-        trac("$Extras.thunderstorm_file", "#storm-trac");
-    });
+       function setRadarImg() {
+          var d = new Date();
+          // alert(d.getDate());
+          document.getElementById('radar').setAttribute("src", "https://cdn.fmi.fi/weather-observations/products/radar-tiles/station_100974/fi/latest.png");;
+       } 
     </script>
-    #end if
   </head>
   <body>
     <div class="container-fluid">
@@ -392,7 +389,7 @@
               <div class="panel-collapse collapse" id="collapseAccTwoThree">
                 <div class="panel-body">
                   <a href="$Extras.radar_url" target="_blank">
-                    <img src="$Extras.radar_img" class="center-block img-responsive" style="padding-bottom: 5px;" alt="Radar" />
+                    <img id="radar" class="center-block img-responsive" style="padding-bottom: 5px;" alt="Radar" />
                   </a>
                   <p class="text-center">Click on the image above for an hourly animation</p>
                 </div>
