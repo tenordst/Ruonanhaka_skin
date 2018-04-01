@@ -35,9 +35,10 @@
     <script type="text/javascript">
        function setRadarImg() {
           var d = new Date();
-          // alert(d.getDate());
-          document.getElementById('radar').setAttribute("src", "https://cdn.fmi.fi/weather-observations/products/radar-tiles/station_100974/fi/latest.png");;
-       } 
+//          alert(d.getDate());
+//          document.getElementById('radar').setAttribute("src", "https://cdn.fmi.fi/weather-observations/products/radar-tiles/station_100974/fi/latest.png");
+       }
+       window.onload = setRadarImg; 
     </script>
   </head>
   <body>
@@ -389,7 +390,7 @@
               <div class="panel-collapse collapse" id="collapseAccTwoThree">
                 <div class="panel-body">
                   <a href="$Extras.radar_url" target="_blank">
-                    <img id="radar" class="center-block img-responsive" style="padding-bottom: 5px;" alt="Radar" />
+                    <img id="radar" src="$Extras.radar_img" class="center-block img-responsive" style="padding-bottom: 5px;" alt="Radar" />
                   </a>
                   <p class="text-center">Click on the image above for an hourly animation</p>
                 </div>
