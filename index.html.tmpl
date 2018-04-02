@@ -60,6 +60,7 @@
           </div>
           <div class="col-md-6 text-right">
             <h4 class="text-right">$current.dateTime</h4>
+            $current.outTemp, $current.windSpeed
           </div>
         </div>
       </div>
@@ -402,14 +403,14 @@
               <div class="panel-heading">
                 <h4 class="panel-title">
                   <a class="accordian-toggle collapsed" data-toggle="collapse" data-parent="#accordionTwo" href="#collapseAccTwoFour">
-                    Satellite
+                    Forecast
                   </a>
                 </h4>
               </div>
               <div class="panel-collapse collapse" id="collapseAccTwoFour">
                 <div class="panel-body">
                   <a href="$Extras.satellite_url" target="_blank">
-                    <img src="$Extras.satellite_img" class="center-block img-responsive" style="padding-bottom: 5px;" alt="Satellite" />
+                    <img src="$Extras.satellite_img" class="center-block img-responsive" style="padding-bottom: 5px;" width="300" height="433" alt="Satellite" />
                   </a>
                   <p class="text-center">Click on the image above for a daily animation</p>
                 </div>
